@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Verificação de nacionalidade</h1>
+    Em que país você nasceu? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+    </div>
+
+    <script>
+        function verificar() {
+            var pais= document.querySelector('input#txtpais')
+            var res= document.querySelector('div#res')
+            res.innerHTML = `<p>Esse é o país que você nasceu: ${pais.value}.</p>` // precisa colocar o .value sempre, senão dá erro! 
+            if (pais.value == 'Brasil') {
+                res.innerHTML += `<p>Sua nacionalidade é brasileira!</p>`
+            } else {
+                res.innerHTML += `<p>Então você não é brasileiro. Ou será que você tem dupla nacionalidade?</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<style>
+    div {
+        background-color: cadetblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        width: 200px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.253);
+        padding: 80px 20px;
+    }
+
+</style>
+<body>
+    <div id="area">Interaja aqui...</div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseover', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Você clicou aqui!'
+            a.style.background = 'burlywood'
+        }
+
+        function entrar () {
+            a.innerText = 'Seu mouse está aqui!'
+            a.style.background = 'brown'
+        }
+
+        function sair() {
+            a.innerText = 'Seu mouse saiu daqui...'
+            a.style.background = 'cadetblue'
+        }
+    </script>
+</body>
+</html>

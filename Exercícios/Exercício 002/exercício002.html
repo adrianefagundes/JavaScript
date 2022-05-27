@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de tipo e Formatação de string</title>
+</head>
+<style>
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: cornsilk;
+}
+
+main {
+    background-color: white;
+    max-width: 800px;
+    min-width: 320px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.219);
+    padding: 1px 15px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: bisque;
+    text-align: center;
+    color:cornflowerblue;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.301);
+}
+
+h2 {
+    text-indent: 8px;
+}
+
+</style>
+
+<script>
+    var nome = window.prompt('Qual seu nome?')
+    window.alert('É um prazer te ver por aqui, ' + nome)
+    document.write(`Seu nome tem ${nome.length} letras<br>`)
+    document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}`)
+</script>
+
+<body>
+    <main>
+        <h1>Conversão de tipo</h1>
+        <h2>Conversão de STRING -> NÚMERO</h2>
+        <p>
+            Number.parseInt(n)
+            <br>
+            Number.parseFloat(n)
+            <br>
+            Numer(n) -> utilizando esse comando, o JavaScript vai decidir o tipo do número a partir dos dados informados.
+        </p>
+        <h2>Conversão de NÚMERO -> STRING</h2>
+        <p>
+            String()
+            <br>
+            n.toString()
+        </p>
+        <h1>Formatação de String</h1>
+        <p>
+
+        </p>
+    </main>
+</body>
+</html>

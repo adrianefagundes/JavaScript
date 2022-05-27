@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo sobre DOM</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        main {
+            max-width: 800px;
+            min-width: 320;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+            font-weight: bold;
+            color: cadetblue;
+            padding: 15px;
+        }
+
+        .destaque {
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>O que é DOM?</h1>
+        <p>DOM é um acrônimo para <span class="destaque">Document Object Model</span> e ele permite que o desenvolvedor navegue na árvore DOM (na hierarquia de <strong>elementos</strong> dentro do documento html) de maneira mais rápida e simplificada.</p>
+        <p>A fim de fazer um teste de modificação de texto com JavaScript, será adicionado este parágrafo e mais um, logo abaixo. Este último será colorido de azul após o comando:</p>
+        <p><strong>var p1 = window.document.getElemntsByTagName('p')[2]<br>
+        p1.style.color = 'blue'</strong></p>
+        <h2>Método de seleção de elementos</h2>
+        <ul>
+            <li>Por Marca (tag):</li>
+            <p>getElementsByTagName()</p>
+            <li>Por ID</li>
+            <p>getElementByID()</p>
+            <li>Por Nome</li>
+            <p>getElementsByName()</p>
+            <li>Por Classe</li>
+            <p>getElementsByClassName()</p>
+            <li>Por <span class="destaque">Seletor</span></li>
+            <p>querySelector() <br> querySelectorAll()</p>
+        </ul>
+        <div id="mensagem">A DIV TAMBÉM PODE SER MODIFICADA DA MESMA FORMA</div>
+        <p>var d = window.document.getElementById('mensagem') <br>
+            d.style.background = 'beige'</p>
+        <h2>QuerySelecor()</h2>
+        <p>Quando se está selecionando por ID, pode-se fazer a seleção da forma acima OU utilizando os seletores, como no exemplo abaixo:</p>
+        <p><strong>var d = window.document.querySelector(div#msg)</strong></p>
+        <p>Nesse caso teriamos a mesma função exercida do que o que foi feito anteriormente com getElementById.</p>
+        <p>Com o querySelector utiliza-se a sintaxe do CSS.</p>
+    </main>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[2]
+        p1.style.color='cadetblue'
+
+        var d = window.document.getElementById('mensagem')
+        d.style.background = 'beige'
+    </script>
+</body>
+</html>

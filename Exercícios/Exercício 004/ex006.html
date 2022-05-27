@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Velocidade</title>
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        text-align: center;
+        max-width: 1000px;
+        min-width: 320px;
+    }
+
+    h1 {
+        background-color: cadetblue;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+        color: white;
+        max-width: 1000px;
+        min-width: 320px;
+    }
+
+    main {
+        background-color: rgba(95, 158, 160, 0.425);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+        padding: 70px;
+    }
+
+    input {
+        margin-bottom: 30px;
+    }
+
+    div {
+        background-color: rgba(95, 158, 160, 0.267);
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.103);
+        max-width: 500px;
+        min-width: 320px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .multa {
+        color: brown;
+    }
+
+
+
+</style>
+
+<body>
+    <h1>Verificação de multa por excesso de velocidade</h1>
+    <main>
+            <strong>Velocidade do seu carro: </strong><input type="number" name="txtvel" id="txtvel"> Km/h     
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+    </main>
+
+    <script>
+        function calcular() {
+            var vel= window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res') // Lembrando que estou selecionando a res ou a vel dos elementos div e input!
+            var nvel = Number(vel.value) // Aqui estou convertendo a minha string que possui um número em um número de fato.
+            res.innerHTML = `<p>Sua velocidade atual é de ${nvel} Km/h.</p>`
+            if (nvel > 60) {
+                res.innerHTML += `<p class="multa">Você será <strong>multado</strong> por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija com cuidado e sempre utilize o cinto de segurança.</p>`
+        }
+    </script>
+</body>
+</html>
