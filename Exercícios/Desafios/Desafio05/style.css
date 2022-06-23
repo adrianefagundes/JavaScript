@@ -1,0 +1,63 @@
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: #cca0bb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
+    margin: auto;
+    border-radius: 5px;
+    width: 350px;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+select {
+    width: 300px;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+ .button {
+    font-size: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+footer > p {
+    font-size: 0.7rem;
+    padding-top: 20px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.189);
+  }
+
+.fa:hover {
+    opacity: 0.7;
+  }
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-instagram {
+    background: #BF2C83;
+    color: white;
+  }
