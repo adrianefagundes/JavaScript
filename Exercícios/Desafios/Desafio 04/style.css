@@ -26,6 +26,7 @@ section > div {
 
 select {
     width: 300px;
+    padding: 5px;
 }
 
 footer {
