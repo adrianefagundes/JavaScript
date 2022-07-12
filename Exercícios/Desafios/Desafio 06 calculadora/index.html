@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <main>
+    <div>
+        <div class="space">
+            <span id="numero">0</span>
+        </div>
+        <div class="row">
+            <button class="square" onclick="sete()">7</button>
+            <button class="square" onclick="oito()">8</button>
+            <button class="square" onclick="nove()">9</button>
+            <button class="square" onclick="dividir()">/</button>
+        </div>
+        <div class="row">
+            <button class="square" onclick="quatro()">4</button>
+            <button class="square" onclick="cinco()">5</button>
+            <button class="square" onclick="seis()">6</button>
+            <button class="square" onclick="multiplica()">x</button>
+        </div>
+        <div class="row">
+            <button class="square" onclick="um()">1</button>
+            <button class="square" onclick="dois()">2</button>
+            <button class="square" onclick="tres()">3</button>
+            <button class="square" onclick="menos()">-</button>
+        </div>
+        <div class="row">
+            <button class="squareplus" onclick="zero()">0</button>
+            <button class="square" onclick="mais()">+</button>
+        </div>
+        <input class="button" type="button" onclick="resultado()" value="Resultado">
+    </div>
+    <div class="resultado">
+
+    </div>
+    </main>
+    <script src="calculadora.js"></script>
+</body>
+</html>
